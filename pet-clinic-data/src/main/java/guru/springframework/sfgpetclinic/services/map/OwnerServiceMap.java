@@ -2,10 +2,12 @@ package guru.springframework.sfgpetclinic.services.map;
 
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.stfpetclinic.model.Owner;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 // you removed the CRUD SERVER MIGHT WANT TO PUT IT BACK
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
         implements OwnerService {
 
