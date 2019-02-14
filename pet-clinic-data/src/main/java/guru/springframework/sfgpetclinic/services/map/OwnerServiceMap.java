@@ -1,12 +1,13 @@
 package guru.springframework.sfgpetclinic.services.map;
 
-import guru.springframework.sfgpetclinic.services.CrudService;
+import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.stfpetclinic.model.Owner;
 
 import java.util.Set;
 
+// you removed the CRUD SERVER MIGHT WANT TO PUT IT BACK
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
-        implements CrudService<Owner,Long> {
+        implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -32,5 +33,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long>
     @Override
     public Owner findById(Long id) {
         return super.findById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
