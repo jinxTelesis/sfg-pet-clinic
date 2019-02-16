@@ -4,7 +4,6 @@ import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.VetService;
 import guru.springframework.stfpetclinic.model.Owner;
 import guru.springframework.stfpetclinic.model.Vet;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,12 +13,8 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    @Autowired // == just for intention ==
     public DataLoader(OwnerService ownerService, VetService vetService){
         this.ownerService = ownerService;
-
-        //this.ownerService = new OwnerServiceMap();
-        //this.vetService = new VetServiceMap();
 
         this.vetService = vetService;
     }
@@ -54,7 +49,7 @@ public class DataLoader implements CommandLineRunner {
         vet2.setFirstName("Jessie");
         vet2.setLastName("Porter");
 
-        vetService.save(vet1);
+        vetService.save(vet2);
 
         System.out.println("Loaded Vets.....");
 
