@@ -1,8 +1,11 @@
 package guru.springframework.stgpetclinic.bootstrap;
 
 import guru.springframework.sfgpetclinic.services.OwnerService;
+import guru.springframework.sfgpetclinic.services.PetTypeService;
+import guru.springframework.sfgpetclinic.services.SpecialitiesService;
 import guru.springframework.sfgpetclinic.services.VetService;
 import guru.springframework.stfpetclinic.model.Owner;
+import guru.springframework.stfpetclinic.model.Speciality;
 import guru.springframework.stfpetclinic.model.Vet;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,11 +15,15 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
+    private final SpecialitiesService specialitiesService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService){
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialitiesService specialitiesService){
         this.ownerService = ownerService;
 
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
+        this.specialitiesService = specialitiesService;
     }
 
     @Override
@@ -26,6 +33,15 @@ public class DataLoader implements CommandLineRunner {
         owner1.setLastName("Westion");
 
         ownerService.save(owner1);
+
+        Speciality radiology = new Speciality();
+        radiology.setDescription("Radiology");
+
+        Speciality dentisitry = new Speciality();
+        dentisitry.setDescription("dentistry");
+
+        Speciality surgery = new Speciality();
+        surgery.setDescription("Surgery");
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");

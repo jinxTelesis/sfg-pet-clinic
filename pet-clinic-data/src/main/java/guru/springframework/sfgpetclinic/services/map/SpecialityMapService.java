@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service // makes available to spring context. 
+@Service // makes available to spring context.
 public class SpecialityMapService extends AbstractMapService<Speciality,Long> implements SpecialitiesService {
 
     @Override
