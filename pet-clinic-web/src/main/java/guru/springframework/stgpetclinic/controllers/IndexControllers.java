@@ -10,4 +10,9 @@ public class IndexControllers {
     public String index(){
         return "index";
     }
+
+    @RequestMapping("/oups") //TODO place holder
+    public String oupsHandler(){
+        return "notimplemented";
+    }
 }
