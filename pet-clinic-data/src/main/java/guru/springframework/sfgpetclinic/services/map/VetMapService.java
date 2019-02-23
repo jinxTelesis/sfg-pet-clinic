@@ -7,7 +7,7 @@ import java.util.Set;
 
 // we removed crud
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long>
+public class VetMapService extends AbstractMapService<Vet, Long>
         implements VetService {
 
     @Override
