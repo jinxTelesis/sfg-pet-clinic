@@ -7,7 +7,7 @@ import java.util.Set;
 
 // you removed the CRUD SERVER MIGHT WANT TO PUT IT BACK
 @Service
-public class OwnerServiceMap extends AbstractMapService<Owner, Long>
+public class OwnerMapService extends AbstractMapService<Owner, Long>
         implements OwnerService {
 
     @Override
