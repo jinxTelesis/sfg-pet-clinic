@@ -1,4 +1,4 @@
-package guru.springframework.sfgpetclinic.services;
+package guru.springframework.sfgpetclinic.services.map;
 
 import guru.springframework.stfpetclinic.model.PetType;
 
