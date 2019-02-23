@@ -9,7 +9,7 @@ import java.io.Serializable;
 @MappedSuperclass // Tells JPA gonna inhert from this
 public class BaseEntity implements Serializable {
 
-    @Id // JPA
+    @Id // JPA comment
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // box type hibernate recommendation
 
