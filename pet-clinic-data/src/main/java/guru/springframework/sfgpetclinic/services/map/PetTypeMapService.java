@@ -1,11 +1,13 @@
 package guru.springframework.sfgpetclinic.services.map;
 
 import guru.springframework.stfpetclinic.model.PetType;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service // == if this is missing spring will miss this ==
+@Profile({"default","map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements OwnerMapService.PetTypeService {
 
 

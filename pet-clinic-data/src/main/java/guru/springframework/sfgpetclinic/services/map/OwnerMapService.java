@@ -4,12 +4,14 @@ import guru.springframework.sfgpetclinic.services.CrudService;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.stfpetclinic.model.Owner;
 import guru.springframework.stfpetclinic.model.PetType;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 // you removed the CRUD SERVER MIGHT WANT TO PUT IT BACK
 @Service
+@Profile({"default","map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long>
         implements OwnerService {
 
