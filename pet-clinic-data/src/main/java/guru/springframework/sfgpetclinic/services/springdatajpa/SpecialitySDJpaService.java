@@ -1,7 +1,7 @@
 package guru.springframework.sfgpetclinic.services.springdatajpa;
 
 import guru.springframework.sfgpetclinic.repositories.SpecialtyRepository;
-import guru.springframework.sfgpetclinic.services.map.SpecialitiesService;
+import guru.springframework.sfgpetclinic.services.SpecialitiesService;
 import guru.springframework.stfpetclinic.model.Speciality;
 
 import java.util.HashSet;
