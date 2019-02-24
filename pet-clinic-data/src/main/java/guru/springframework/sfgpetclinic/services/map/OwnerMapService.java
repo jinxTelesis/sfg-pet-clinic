@@ -1,6 +1,9 @@
 package guru.springframework.sfgpetclinic.services.map;
 
+import guru.springframework.sfgpetclinic.services.CrudService;
+import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.stfpetclinic.model.Owner;
+import guru.springframework.stfpetclinic.model.PetType;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -39,5 +42,9 @@ public class OwnerMapService extends AbstractMapService<Owner, Long>
     @Override
     public Owner findByLastName(String lastName) {
         return null;
+    }
+
+    public static interface PetTypeService extends CrudService<PetType, Long> {
+
     }
 }
