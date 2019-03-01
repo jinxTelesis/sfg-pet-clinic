@@ -7,6 +7,7 @@ import guru.springframework.stfpetclinic.model.PetType;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 // you removed the CRUD SERVER MIGHT WANT TO PUT IT BACK
@@ -47,6 +48,11 @@ public class OwnerMapService extends AbstractMapService<Owner, Long>
 
     @Override
     public Owner findByLastName(String lastName) {
+        return null;
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
         return null;
     }
 
