@@ -60,13 +60,13 @@ public class OwnerController  {
             owner.setLastName("");
         }
 
-        List<Owner> results = ownerService.findAllByLastNameLike(owner.getLastName());
+        List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
 
 
         if(results.isEmpty())
         {
 
-            result.rejectValue("lastName", "notFound","not Found");
+            //result.rejectValue("lastName", "notFound","not Found");
             return "owners/findOwners";
 
         } else if (results.size() == 1)
