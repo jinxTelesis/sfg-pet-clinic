@@ -1,10 +1,17 @@
 package guru.springframework.stfpetclinic.model;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
 
 @MappedSuperclass // Tells JPA gonna inhert from this
 public class BaseEntity implements Serializable {
@@ -12,6 +19,8 @@ public class BaseEntity implements Serializable {
     @Id // JPA comment
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // box type hibernate recommendation
+
+
 
     public Long getId() {
         return id;
