@@ -104,11 +104,13 @@ public class OwnerController  {
         }
     }
 
+
     public String initUpdateOwnerForm(@PathVariable("ownerId") Long ownerId, Model model)
     {
         model.addAttribute(ownerService.findById(ownerId));
         return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
     }
+
 
     public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, @PathVariable("ownerId") Long ownerId)
     {
@@ -121,8 +123,6 @@ public class OwnerController  {
             Owner savedOwner = ownerService.save(owner);
             return "redirect:/owners" + savedOwner.getId();
         }
-
-
     }
 
 
